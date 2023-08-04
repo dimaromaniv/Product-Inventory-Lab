@@ -9,8 +9,8 @@ public class Sneaker {
     private int qty;
     private float price;
 
-    public Sneaker () {
-
+    public Sneaker(){
+        this(0,null,null,null,0,0,0);
     }
     public Sneaker (int id,String name,String brand,String sport,double size, int qty,float price) {
         this.id = id;
@@ -76,5 +76,9 @@ public class Sneaker {
 
     public void setPrice(float price) {
         this.price = price;
+    }
+
+    public int getQuantity() {
+        return this.qty;
     }
 }
