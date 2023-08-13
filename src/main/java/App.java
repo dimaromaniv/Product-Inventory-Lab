@@ -1,8 +1,12 @@
 import models.Sneaker;
 import services.SneakerService;
 
+import java.util.Arrays;
 import java.util.Date;
 import java.util.Scanner;
+
+import static services.SneakerService.inventory;
+import static utils.CSVUtils.csvFile;
 
 public class App {
 
@@ -25,11 +29,13 @@ public class App {
         boolean running = true;
         Scanner scanner = new Scanner(System.in);
 
+
         while (running) {
             Console.printMainMenu();
+            utils.CSVUtils.loadData();
+            utils.CSVUtils.writeSneakersToCSV(csvFile, inventory);
             int choice = scanner.nextInt();
             scanner.nextLine(); // Consume newline
-
             switch (choice) {
                 case 1:
                     addNewItem();

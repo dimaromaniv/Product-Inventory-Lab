@@ -9,7 +9,7 @@ public class Sneaker {
     private int qty;
     private float price;
 
-    public Sneaker(){
+    public Sneaker(int id, String name, String brand, String sport, int qty, float price){
         this(0,null,null,null,0,0,0);
     }
     public Sneaker (int id,String name,String brand,String sport,double size, int qty,float price) {

@@ -4,9 +4,9 @@ import models.Sneaker;
 
 import java.util.ArrayList;
 
-public class SneakerService extends Sneaker{
+public class SneakerService {
     private static int nextID = 1;
-    private ArrayList<Sneaker> inventory = new ArrayList<>();
+    public static ArrayList<Sneaker> inventory = new ArrayList<>();
 
 
     public Sneaker create(String expectedName, String expectedBrand, String expectedSport, double expectedSize, int expectedQty, float expectedPrice) {
